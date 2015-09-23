@@ -36,7 +36,7 @@ class Func
 		*	Film Posteri
 		*/
 		preg_match('#<div class="image"><a href="(.*?)"> <img height="(.*?)"width="(.*?)"alt="(.*?)"title="(.*?)"src="(.*?)"itemprop="image" /></a>                            </div>#', $raw, $resimRaw);
-		if (empty(@$resimRaw[6])) {
+		if (isset($resimRaw[6]) && empty($resimRaw[6])) {
 			$film->resim = POSTER;
 		} else {
 			$film->resim = 'data:image/jpeg;base64,' . base64_encode(file_get_contents(@$resimRaw[6]));
