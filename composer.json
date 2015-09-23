@@ -1,7 +1,7 @@
 {
     "name": "usameavci/imdbbot",
     "require": {
-        "guzzlehttp/guzzle": "*"
+        "guzzle/guzzle": "~3.9"
     },
     "authors": [
         {
