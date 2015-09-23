@@ -1,0 +1,12 @@
+{
+    "name": "usameavci/imdbbot",
+    "require": {
+        "guzzlehttp/guzzle": "*"
+    },
+    "authors": [
+        {
+            "name": "usameavci",
+            "email": "usameavci@gmail.com"
+        }
+    ]
+}

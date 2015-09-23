@@ -14,14 +14,18 @@ class Func
 
 	public static function curl($adress)
 	{
-		$curl = curl_init();
-		curl_setopt($curl, CURLOPT_URL, $adress);
-		curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-		curl_setopt($curl, CURLOPT_USERAGENT, $_SERVER["HTTP_USER_AGENT"]);
-		curl_setopt($curl, CURLOPT_FOLLOWLOCATION, true);
-		curl_setopt($curl,CURLOPT_HTTPHEADER,array('Accept-Language: tr-TR,tr;q=0.8,en-US;q=0.5,en;q=0.3'));
-		$sonuc = curl_exec($curl);
-		curl_close($curl);
+		//$curl = curl_init();
+		//curl_setopt($curl, CURLOPT_URL, $adress);
+		//curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+		//curl_setopt($curl, CURLOPT_USERAGENT, $_SERVER["HTTP_USER_AGENT"]);
+		//curl_setopt($curl, CURLOPT_FOLLOWLOCATION, true);
+		//curl_setopt($curl,CURLOPT_HTTPHEADER,array('Accept-Language: tr-TR,tr;q=0.8,en-US;q=0.5,en;q=0.3'));
+		//$sonuc = curl_exec($curl);
+		//curl_close($curl);
+
+		$client = new GuzzleHttp\Client();
+		$res = $client->request('GET', 'http://www.imdb.com/title/tt0111161');
+		$sonuc = $res->getBody();
 		return str_replace(array("\n","\t","\r"), null, $sonuc);
 	}
 
