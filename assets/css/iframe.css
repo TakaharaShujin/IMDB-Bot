@@ -1,0 +1,16 @@
+.film-box {padding: 30px;}
+.film-box .left-block {max-width: 214px; margin: 0 auto;}
+.film-box .thumbnail {border: 0px; padding: 0px; position: relative;}
+.film-box .thumbnail img {border-radius: 4px; border: 1px solid #DDDDDD;}
+.film-box .thumbnail .star {position: absolute; top: -35px; left: -28px; width: 60px; height: 72px;}
+.film-box .thumbnail .star::before {font-family: FontAwesome; content: "\f005"; position: absolute;
+font-size: 64px;
+color: #FFD44E; text-shadow: 0 2px 0px #E77D22;}
+
+.film-box .thumbnail .star .text {font-size: 20px; text-align: center; margin-top: 32px; display: block; position: relative;}
+.film-box .title {padding: 10px; background-color: #F9F9F9; border: 1px solid #DDDDDD; margin-bottom: 15px;}
+.film-box .title h3 {margin: 0px; font-size: 18px; text-transform: uppercase;}
+
+@media (max-width: 768px) {
+	.film-box .left-block {margin-bottom: 15px;}
+}
