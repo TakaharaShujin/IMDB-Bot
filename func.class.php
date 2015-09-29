@@ -119,7 +119,7 @@ class Func
 	public static function json($data, $code)
 	{
 		header('Content-type: application/json; charset: utf8');
-		http_response_code($code);
+		header('HTTP/1.1 '.$code);
 		return json_encode($data);
 	}
 }
